@@ -7,6 +7,6 @@ you can scan my blog to have further explaination of all the algorithms.
 myBlog stormhan.github.io
 
 ## Catalog
-> 1,enumerate algorithms.
-
+> 1,enumerating algorithms.
+> 2,recursion algorithms.
 
