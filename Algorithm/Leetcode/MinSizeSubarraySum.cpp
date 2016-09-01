@@ -71,3 +71,38 @@ int minSizeSubarraySum(int s, vector<int>& nums)
 }
 
 // two pointer
+int minSizeSubarraySum2(int s, vector<int>& nums)
+{
+	int sum = 0;
+	for (int i = 0; i < nums.size(); ++i)
+	{
+		sum += nums[i];
+	}
+
+	if (s > sum)
+		return 0;
+
+	//two pointer
+	int p1 = 0;
+	int p2 = 0;
+
+	int min = nums.size();
+	sum = 0;
+	int count = 0;
+	while (p2 < nums.size())
+	{
+		do{
+			sum += nums[p2];
+			p2++;
+		} while (sum < s && p2 < nums.size());
+
+		do{
+			sum -= nums[p1];
+			p1++;
+		} while (sum >= s);
+
+		count = p2 - p1 + 1;
+		if (count < min) min = count;
+	}
+	return min;
+}
