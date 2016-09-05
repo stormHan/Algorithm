@@ -19,7 +19,6 @@ Here is an example of version numbers ordering:
 
 using namespace std;
 
-
 int compareVersion(string version1, string version2)
 {
 	int val1, val2;
